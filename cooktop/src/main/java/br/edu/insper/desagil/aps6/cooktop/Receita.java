@@ -16,9 +16,7 @@ public class Receita {
 				item.decrementa();
 			} else {
 				ItemComposto itemComposto = (ItemComposto) ingrediente;
-				for (ItemSimples item : itemComposto.getItens()) {
-					item.decrementa();
-				}
+				itemComposto.decrementa();
 			}
 		}
 	}

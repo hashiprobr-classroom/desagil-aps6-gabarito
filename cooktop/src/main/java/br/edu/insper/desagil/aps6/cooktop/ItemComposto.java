@@ -13,4 +13,10 @@ public class ItemComposto extends Item {
 	public List<ItemSimples> getItens() {
 		return itens;
 	}
+
+	public void decrementa() {
+		for (ItemSimples item : itens) {
+			item.decrementa();
+		}
+	}
 }
