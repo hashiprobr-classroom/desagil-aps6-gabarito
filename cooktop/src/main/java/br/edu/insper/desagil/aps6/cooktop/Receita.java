@@ -13,13 +13,11 @@ public class Receita {
 		for (Item ingrediente : ingredientes) {
 			if (ingrediente instanceof ItemSimples) {
 				ItemSimples item = (ItemSimples) ingrediente;
-				int quantidade = item.getQuantidade();
-				item.setQuantidade(quantidade - 1);
+				item.decrementa();
 			} else {
 				ItemComposto itemComposto = (ItemComposto) ingrediente;
 				for (ItemSimples item : itemComposto.getItens()) {
-					int quantidade = item.getQuantidade();
-					item.setQuantidade(quantidade - 1);
+					item.decrementa();
 				}
 			}
 		}

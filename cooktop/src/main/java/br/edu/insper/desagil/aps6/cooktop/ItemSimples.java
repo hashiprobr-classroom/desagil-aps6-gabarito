@@ -15,4 +15,8 @@ public class ItemSimples extends Item {
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
+
+	public void decrementa() {
+		quantidade--;
+	}
 }
