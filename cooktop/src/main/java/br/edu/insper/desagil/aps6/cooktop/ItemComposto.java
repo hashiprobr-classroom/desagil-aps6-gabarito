@@ -3,17 +3,17 @@ package br.edu.insper.desagil.aps6.cooktop;
 import java.util.List;
 
 public class ItemComposto {
-	private List<Item> itens;
+	private List<ItemSimples> itens;
 	private String codigo;
 	private String nome;
 
-	public ItemComposto(List<Item> itens, String codigo, String nome) {
+	public ItemComposto(List<ItemSimples> itens, String codigo, String nome) {
 		this.itens = itens;
 		this.codigo = codigo;
 		this.nome = nome;
 	}
 
-	public List<Item> getItens() {
+	public List<ItemSimples> getItens() {
 		return itens;
 	}
 

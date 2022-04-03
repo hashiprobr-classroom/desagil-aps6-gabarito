@@ -11,13 +11,13 @@ public class Receita {
 
 	public void retira() {
 		for (Object ingrediente : ingredientes) {
-			if (ingrediente instanceof Item) {
-				Item item = (Item) ingrediente;
+			if (ingrediente instanceof ItemSimples) {
+				ItemSimples item = (ItemSimples) ingrediente;
 				int quantidade = item.getQuantidade();
 				item.setQuantidade(quantidade - 1);
 			} else {
 				ItemComposto itemComposto = (ItemComposto) ingrediente;
-				for (Item item : itemComposto.getItens()) {
+				for (ItemSimples item : itemComposto.getItens()) {
 					int quantidade = item.getQuantidade();
 					item.setQuantidade(quantidade - 1);
 				}

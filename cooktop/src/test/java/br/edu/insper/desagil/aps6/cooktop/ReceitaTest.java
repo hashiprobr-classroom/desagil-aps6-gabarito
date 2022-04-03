@@ -10,15 +10,15 @@ import org.junit.jupiter.api.Test;
 class ReceitaTest {
 	@Test
 	void test() {
-		Item a = new Item("a", "A", 1);
+		ItemSimples a = new ItemSimples("a", "A", 1);
 
-		Item b = new Item("b", "B", 2);
+		ItemSimples b = new ItemSimples("b", "B", 2);
 
-		Item c = new Item("c", "C", 3);
+		ItemSimples c = new ItemSimples("c", "C", 3);
 
-		Item d = new Item("d", "D", 4);
+		ItemSimples d = new ItemSimples("d", "D", 4);
 
-		List<Item> itens = new ArrayList<>();
+		List<ItemSimples> itens = new ArrayList<>();
 		itens.add(c);
 		itens.add(d);
 		ItemComposto cd = new ItemComposto(itens, "cd", "CD");
