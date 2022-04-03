@@ -1,14 +1,12 @@
 package br.edu.insper.desagil.aps6.cooktop;
 
-public class Item {
+public abstract class Item {
 	private String codigo;
 	private String nome;
-	private int quantidade;
 
-	public Item(String codigo, String nome, int quantidade) {
+	public Item(String codigo, String nome) {
 		this.codigo = codigo;
 		this.nome = nome;
-		this.quantidade = quantidade;
 	}
 
 	public String getCodigo() {
@@ -23,11 +21,5 @@ public class Item {
 		this.nome = nome;
 	}
 
-	public int getQuantidade() {
-		return quantidade;
-	}
-
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
-	}
+	public abstract void decrementa();
 }

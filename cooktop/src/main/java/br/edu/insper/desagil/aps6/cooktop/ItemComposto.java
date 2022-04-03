@@ -2,30 +2,22 @@ package br.edu.insper.desagil.aps6.cooktop;
 
 import java.util.List;
 
-public class ItemComposto {
-	private List<Item> itens;
-	private String codigo;
-	private String nome;
+public class ItemComposto extends Item {
+	private List<ItemSimples> itens;
 
-	public ItemComposto(List<Item> itens, String codigo, String nome) {
+	public ItemComposto(List<ItemSimples> itens, String codigo, String nome) {
+		super(codigo, nome);
 		this.itens = itens;
-		this.codigo = codigo;
-		this.nome = nome;
 	}
 
-	public List<Item> getItens() {
+	public List<ItemSimples> getItens() {
 		return itens;
 	}
 
-	public String getCodigo() {
-		return codigo;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
+	@Override
+	public void decrementa() {
+		for (ItemSimples item : itens) {
+			item.decrementa();
+		}
 	}
 }
