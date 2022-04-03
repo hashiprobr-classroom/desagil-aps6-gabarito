@@ -3,14 +3,14 @@ package br.edu.insper.desagil.aps6.cooktop;
 import java.util.List;
 
 public class Receita {
-	private List<Object> ingredientes;
+	private List<Item> ingredientes;
 
-	public Receita(List<Object> ingredientes) {
+	public Receita(List<Item> ingredientes) {
 		this.ingredientes = ingredientes;
 	}
 
 	public void retira() {
-		for (Object ingrediente : ingredientes) {
+		for (Item ingrediente : ingredientes) {
 			if (ingrediente instanceof ItemSimples) {
 				ItemSimples item = (ItemSimples) ingrediente;
 				int quantidade = item.getQuantidade();

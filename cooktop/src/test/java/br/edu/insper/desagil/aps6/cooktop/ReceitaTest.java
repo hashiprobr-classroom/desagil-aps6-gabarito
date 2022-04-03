@@ -23,7 +23,7 @@ class ReceitaTest {
 		itens.add(d);
 		ItemComposto cd = new ItemComposto(itens, "cd", "CD");
 
-		List<Object> ingredientes = new ArrayList<>();
+		List<Item> ingredientes = new ArrayList<>();
 		ingredientes.add(a);
 		ingredientes.add(b);
 		ingredientes.add(cd);
