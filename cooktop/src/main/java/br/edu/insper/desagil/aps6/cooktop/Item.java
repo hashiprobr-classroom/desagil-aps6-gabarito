@@ -20,4 +20,6 @@ public abstract class Item {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	public abstract void decrementa();
 }

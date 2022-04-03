@@ -16,6 +16,7 @@ public class ItemSimples extends Item {
 		this.quantidade = quantidade;
 	}
 
+	@Override
 	public void decrementa() {
 		quantidade--;
 	}

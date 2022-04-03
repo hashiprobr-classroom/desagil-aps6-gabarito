@@ -14,6 +14,7 @@ public class ItemComposto extends Item {
 		return itens;
 	}
 
+	@Override
 	public void decrementa() {
 		for (ItemSimples item : itens) {
 			item.decrementa();
