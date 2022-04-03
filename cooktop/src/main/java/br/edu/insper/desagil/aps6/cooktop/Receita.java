@@ -11,13 +11,7 @@ public class Receita {
 
 	public void retira() {
 		for (Item ingrediente : ingredientes) {
-			if (ingrediente instanceof ItemSimples) {
-				ItemSimples item = (ItemSimples) ingrediente;
-				item.decrementa();
-			} else {
-				ItemComposto itemComposto = (ItemComposto) ingrediente;
-				itemComposto.decrementa();
-			}
+			ingrediente.decrementa();
 		}
 	}
 }
